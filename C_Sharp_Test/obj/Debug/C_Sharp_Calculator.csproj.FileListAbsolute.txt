@@ -4,3 +4,9 @@ C:\Users\Alpha\Documents\Visual Studio 2012\Projects\C_Sharp_Test\C_Sharp_Test\o
 C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\bin\Debug\C_Sharp_Test.exe.config
 C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\obj\Debug\C_Sharp_Test.exe
 C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\obj\Debug\C_Sharp_Test.pdb
+C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\bin\Debug\C_Sharp_Test.exe
+C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\bin\Debug\C_Sharp_Test.pdb
+C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\obj\Debug\C_Sharp_Calculator.csprojResolveAssemblyReference.cache
+C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\obj\Debug\C_Sharp_Test.Calculator.resources
+C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\obj\Debug\C_Sharp_Test.Properties.Resources.resources
+C:\Users\Alpha\Documents\GitHub\Calculator\C_Sharp_Test\obj\Debug\C_Sharp_Calculator.csproj.GenerateResource.Cache

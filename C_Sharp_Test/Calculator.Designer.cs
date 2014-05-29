@@ -319,6 +319,7 @@
             this.button35.TabIndex = 27;
             this.button35.Text = "C";
             this.button35.UseVisualStyleBackColor = true;
+            this.button35.Click += new System.EventHandler(this.button35_Click);
             // 
             // button36
             // 
@@ -345,7 +346,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(287, 427);
+            this.ClientSize = new System.Drawing.Size(287, 417);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button28);
             this.Controls.Add(this.button30);

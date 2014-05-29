@@ -22,10 +22,7 @@ namespace C_Sharp_Test
             textBox1.Text = myNumericDisplay.GetNumbers();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void Calculator_Load(object sender, EventArgs e)
         {
@@ -33,11 +30,6 @@ namespace C_Sharp_Test
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -121,33 +113,60 @@ namespace C_Sharp_Test
 
         private void button7_Click(object sender, EventArgs e)
         {
-            myMathOperations.Store(myNumericDisplay.GetNumbers(),"Addition");
-            myNumericDisplay.ClearList();
+            if (myMathOperations.LastOperation() != "Addition")
+            {
+                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Addition");
+                textBox1.Text = myMathOperations.Calculate().ToString();
+                myNumericDisplay.ClearList();
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            myMathOperations.Store(myNumericDisplay.GetNumbers(), "Substraction");
-            myNumericDisplay.ClearList();
+            if (myMathOperations.LastOperation() != "Substraction")
+            {
+                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Substraction");
+                textBox1.Text = myMathOperations.Calculate().ToString();
+                myNumericDisplay.ClearList();
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            myMathOperations.Store(myNumericDisplay.GetNumbers(), "Multiplication");
-            myNumericDisplay.ClearList();
+            if (myMathOperations.LastOperation() != "Multiplication")
+            {
+                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Multiplication");
+                textBox1.Text = myMathOperations.Calculate().ToString();
+                myNumericDisplay.ClearList();
+            }
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            myMathOperations.Store(myNumericDisplay.GetNumbers(), "Division");
-            myNumericDisplay.ClearList();
+            if (myMathOperations.LastOperation() != "Division")
+            {
+                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Division");
+                textBox1.Text = myMathOperations.Calculate().ToString();
+                myNumericDisplay.ClearList();
+            }
         }
 
         private void button19_Click(object sender, EventArgs e)
-        {
+        {   
+            //Equal button
             myMathOperations.Store(myNumericDisplay.GetNumbers());
             textBox1.Text = myMathOperations.Calculate().ToString();
             myNumericDisplay.ClearList();
         }
+
+        private void button35_Click(object sender, EventArgs e)
+        {
+            //Clear button
+            myNumericDisplay.ClearList();
+            myMathOperations.ClearList();
+            myNumericDisplay.Add("0");
+            textBox1.Text = myNumericDisplay.GetNumbers();
+        }
+     
     }
 }

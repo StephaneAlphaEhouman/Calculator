@@ -17,7 +17,18 @@ namespace C_Sharp_Test
 	    {
           
 	    }
-        
+
+        public void ClearList()
+        {
+            myNumberHistory.Clear();
+            myOperationHistory.Clear();
+        }
+
+        public string LastOperation()
+        {
+            return (myOperationHistory.Count>0) ? myOperationHistory.Last() : "None";
+        }
+
         public void Store(string Numbers, string NameofOperation)
         {
             if (!string.IsNullOrEmpty(Numbers))
@@ -73,11 +84,7 @@ namespace C_Sharp_Test
 
                 myNumberHistory[sizeofNumberHistory - 2] = myResult;
                 return myResult;
-            }
-
-            else
-            {
-                MessageBox.Show("Cannot Evaluate","Error"); 
+                
             }
 
             return myNumberHistory.Last();
