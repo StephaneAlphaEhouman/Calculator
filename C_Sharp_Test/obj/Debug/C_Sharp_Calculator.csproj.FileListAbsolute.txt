@@ -1,0 +1,3 @@
+C:\Users\Alpha\Documents\Visual Studio 2012\Projects\C_Sharp_Test\C_Sharp_Test\bin\Debug\C_Sharp_Test.exe.config
+C:\Users\Alpha\Documents\Visual Studio 2012\Projects\C_Sharp_Test\C_Sharp_Test\obj\Debug\C_Sharp_Test.exe
+C:\Users\Alpha\Documents\Visual Studio 2012\Projects\C_Sharp_Test\C_Sharp_Test\obj\Debug\C_Sharp_Test.pdb
