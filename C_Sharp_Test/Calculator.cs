@@ -1,4 +1,16 @@
-﻿using System;
+﻿/************************************************************************************/
+/************************************C# Calculator***********************************/
+/************************************************************************************/
+/*	Calculator.cs	: Includes the main code of this project	(source)			*/
+/*	Version : 6.0																	*/
+/*	Date: May 30th 2014																*/
+/*	Developped by Stephane Ehouman      											*/
+/*	Project : Microsoft Calculator Replica									        */
+/*	https://github.com/StephaneAlphaEhouman/Calculator/		                        */
+/*	Phone : (514) 226-1780                      								    */
+/************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
