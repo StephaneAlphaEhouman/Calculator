@@ -118,9 +118,10 @@ namespace C_Sharp_Test
         {
             myMathOperations.setOperation("Addition");
 
+            //Prevents the software from overwriting/clearing previous numbers
             if (!myMathOperations.getOperationStatus())
             {
-                myMathOperations.setOperationStatus();
+                myMathOperations.setOperationStatus(true);
                 myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                 textBox1.Text = myMathOperations.Calculate().ToString();
                 myNumericDisplay.ClearList();
@@ -133,7 +134,7 @@ namespace C_Sharp_Test
 
             if (!myMathOperations.getOperationStatus())
             {
-                myMathOperations.setOperationStatus();
+                myMathOperations.setOperationStatus(true);
                 myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                 textBox1.Text = myMathOperations.Calculate().ToString();
                 myNumericDisplay.ClearList();
@@ -146,7 +147,7 @@ namespace C_Sharp_Test
 
              if (!myMathOperations.getOperationStatus())
              {
-                 myMathOperations.setOperationStatus();
+                 myMathOperations.setOperationStatus(true);
                  myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                  textBox1.Text = myMathOperations.Calculate().ToString();
                  myNumericDisplay.ClearList();
@@ -159,7 +160,7 @@ namespace C_Sharp_Test
 
             if (!myMathOperations.getOperationStatus())
             {
-                myMathOperations.setOperationStatus();
+                myMathOperations.setOperationStatus(true);
                 myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                 textBox1.Text = myMathOperations.Calculate().ToString();
                 myNumericDisplay.ClearList();

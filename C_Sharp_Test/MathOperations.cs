@@ -9,10 +9,10 @@ namespace C_Sharp_Test
 {
     class MathOperations
     {
-        private float myResult;
-        private string myOperation;
-        private bool IsOperationSet;
-        private List<float> myNumberHistory = new List<float>();
+        private float myResult; //stores the calculated value
+        private string myOperation; //stores the arithemic operation to perform     
+        private bool IsOperationSet; //serves as flag to know if the user has chosen an operation   
+        private List<float> myNumberHistory = new List<float>(); // keeps the list of numbers calculated and entered
 
         public MathOperations ()
 	    {
@@ -44,9 +44,9 @@ namespace C_Sharp_Test
             myOperation = NameofOperation;
         }
 
-        public void setOperationStatus()
+        public void setOperationStatus(bool status)
         {
-            IsOperationSet = true;
+            IsOperationSet = status;
         }
 
         public bool getOperationStatus()
@@ -58,6 +58,7 @@ namespace C_Sharp_Test
         {
             int sizeofNumberHistory = myNumberHistory.Count;
 
+            //Calculates the result if enough data is entered
             if (sizeofNumberHistory > 1 && !string.IsNullOrEmpty(myOperation))
             {
                 if (myOperation == "Addition")
