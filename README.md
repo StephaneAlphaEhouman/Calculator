@@ -1,4 +1,4 @@
 Calculator
 ==========
 
-C Sharp Version of Microsoft Calculator
+C# Version of a Microsoft Calculator
