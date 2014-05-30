@@ -10,65 +10,72 @@ namespace C_Sharp_Test
     class MathOperations
     {
         private float myResult;
+        private string myOperation;
+        private bool IsOperationSet;
         private List<float> myNumberHistory = new List<float>();
-        private List<string> myOperationHistory = new List<string>();
 
         public MathOperations ()
 	    {
-          
+            IsOperationSet = false;
 	    }
 
         public void ClearList()
         {
             myNumberHistory.Clear();
-            myOperationHistory.Clear();
         }
 
-        public string LastOperation()
+        public void ClearAll()
         {
-            return (myOperationHistory.Count>0) ? myOperationHistory.Last() : "None";
+            myNumberHistory.Clear();
+            myOperation = "";
+            IsOperationSet = false;
         }
 
-        public void Store(string Numbers, string NameofOperation)
+        public void setNumbers(string Numbers)
         {
             if (!string.IsNullOrEmpty(Numbers))
             {
                 myNumberHistory.Add(Convert.ToSingle(Numbers));
-                myOperationHistory.Add(NameofOperation);
             }
         }
 
-        public void Store(string Numbers)
+        public void setOperation(string NameofOperation)
         {
-            if(!string.IsNullOrEmpty(Numbers))
-            {
-                myNumberHistory.Add(Convert.ToSingle(Numbers));
-            }
+            myOperation = NameofOperation;
+        }
+
+        public void setOperationStatus()
+        {
+            IsOperationSet = true;
+        }
+
+        public bool getOperationStatus()
+        {
+            return IsOperationSet;
         }
 
         public float Calculate()
         {
             int sizeofNumberHistory = myNumberHistory.Count;
-            int sizeofOperationHistory = myOperationHistory.Count;
 
-            if (sizeofNumberHistory > 1 && sizeofNumberHistory > 0)
+            if (sizeofNumberHistory > 1 && !string.IsNullOrEmpty(myOperation))
             {
-                if (myOperationHistory.Last() == "Addition")
+                if (myOperation == "Addition")
                 {
                     myResult = myNumberHistory.ElementAt(sizeofNumberHistory - 2) + myNumberHistory.ElementAt(sizeofNumberHistory - 1);
                 }
 
-                else if (myOperationHistory.Last() == "Substraction")
+                else if (myOperation == "Substraction")
                 {
                     myResult = myNumberHistory.ElementAt(sizeofNumberHistory - 2) - myNumberHistory.ElementAt(sizeofNumberHistory - 1);
                 }
 
-                else if (myOperationHistory.Last() == "Multiplication")
+                else if (myOperation == "Multiplication")
                 {
                     myResult = myNumberHistory.ElementAt(sizeofNumberHistory - 2) * myNumberHistory.ElementAt(sizeofNumberHistory - 1);
                 }
 
-                else if (myOperationHistory.Last() == "Division")
+                else if (myOperation == "Division")
                 {
                     if (myNumberHistory.ElementAt(sizeofNumberHistory - 1) != 0)
                     {

@@ -13,7 +13,9 @@ namespace C_Sharp_Test
     public partial class Calculator : Form
     {
 
+        //The numerical display is in charge of displaying the numbers in the text box
         NumericDisplay myNumericDisplay = new NumericDisplay();
+        //The math operation object is in charge of all the arthimetic 
         MathOperations myMathOperations = new MathOperations();
         
         public Calculator()
@@ -41,6 +43,7 @@ namespace C_Sharp_Test
 
         private void button13_Click(object sender, EventArgs e)
         {
+            //Each number buttons when click add a number to the list and updates the numerical display
             myNumericDisplay.Add("7");
             textBox1.Text = myNumericDisplay.GetNumbers();
         }
@@ -113,9 +116,12 @@ namespace C_Sharp_Test
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (myMathOperations.LastOperation() != "Addition")
+            myMathOperations.setOperation("Addition");
+
+            if (!myMathOperations.getOperationStatus())
             {
-                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Addition");
+                myMathOperations.setOperationStatus();
+                myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                 textBox1.Text = myMathOperations.Calculate().ToString();
                 myNumericDisplay.ClearList();
             }
@@ -123,9 +129,12 @@ namespace C_Sharp_Test
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (myMathOperations.LastOperation() != "Substraction")
+            myMathOperations.setOperation("Substraction");
+
+            if (!myMathOperations.getOperationStatus())
             {
-                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Substraction");
+                myMathOperations.setOperationStatus();
+                myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                 textBox1.Text = myMathOperations.Calculate().ToString();
                 myNumericDisplay.ClearList();
             }
@@ -133,19 +142,25 @@ namespace C_Sharp_Test
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (myMathOperations.LastOperation() != "Multiplication")
-            {
-                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Multiplication");
-                textBox1.Text = myMathOperations.Calculate().ToString();
-                myNumericDisplay.ClearList();
-            }
+            myMathOperations.setOperation("Multiplication");
+
+             if (!myMathOperations.getOperationStatus())
+             {
+                 myMathOperations.setOperationStatus();
+                 myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
+                 textBox1.Text = myMathOperations.Calculate().ToString();
+                 myNumericDisplay.ClearList();
+             }
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            if (myMathOperations.LastOperation() != "Division")
+            myMathOperations.setOperation("Division");
+
+            if (!myMathOperations.getOperationStatus())
             {
-                myMathOperations.Store(myNumericDisplay.GetNumbers(), "Division");
+                myMathOperations.setOperationStatus();
+                myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
                 textBox1.Text = myMathOperations.Calculate().ToString();
                 myNumericDisplay.ClearList();
             }
@@ -154,7 +169,7 @@ namespace C_Sharp_Test
         private void button19_Click(object sender, EventArgs e)
         {   
             //Equal button
-            myMathOperations.Store(myNumericDisplay.GetNumbers());
+            myMathOperations.setNumbers(myNumericDisplay.GetNumbers());
             textBox1.Text = myMathOperations.Calculate().ToString();
             myNumericDisplay.ClearList();
         }
@@ -163,7 +178,7 @@ namespace C_Sharp_Test
         {
             //Clear button
             myNumericDisplay.ClearList();
-            myMathOperations.ClearList();
+            myMathOperations.ClearAll();
             myNumericDisplay.Add("0");
             textBox1.Text = myNumericDisplay.GetNumbers();
         }
